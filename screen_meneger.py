@@ -3,6 +3,7 @@ import cv2
 import pyautogui
 
 class ScreenMeneger:
+
     @staticmethod
     def get_all_matches_by_image(image_to_search: str):
         try:
