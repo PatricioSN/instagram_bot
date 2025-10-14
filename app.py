@@ -20,5 +20,6 @@ def run():
 
         if keyboard.is_pressed("esc"):
             print("leaving app...")
+            time.sleep(1.5)
             break
 run()
