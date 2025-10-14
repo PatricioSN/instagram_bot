@@ -1,9 +1,16 @@
+import random
+import time
+
 from screen_meneger import ScreenMeneger
 
 def run():
     while True:
-        # coordinates = ScreenMeneger.get_all_matches_by_image(image_to_search=r'.\foxy.png')
-        # for coordinate in coordinates:
-        #     print(coordinate)
-        print(ScreenMeneger.is_app_focused(app_title_name="instagram"))
+        if ScreenMeneger.is_app_focused(app_title_name="instagram"):
+            coordinates = ScreenMeneger.search_image_on_screen(image_to_search=r'.\img.png')
+            for coordinate in coordinates:
+                ScreenMeneger.click_on_screen(coordinate)
+                time.sleep(random.randint(1, 2))
+
+            ScreenMeneger.scroll_on_screen(value_to_scroll=-400)
+            time.sleep(random.randint(1, 2))
 run()
