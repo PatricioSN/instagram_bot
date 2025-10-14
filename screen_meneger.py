@@ -9,7 +9,7 @@ class ScreenMeneger:
 
     # The method tries to find the image on the screen and returns the coordinates of the found image.
     @staticmethod
-    def search_image_on_screen(image_to_search: str):
+    def search_image_on_screenfun(image_to_search: str):
         try:
             return list(pyautogui.locateAllOnScreen(image=image_to_search, grayscale=True, confidence=0.9))
         except pyscreeze.ImageNotFoundException:

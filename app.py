@@ -1,6 +1,6 @@
 import random
 import time
-
+import keyboard
 from screen_meneger import ScreenMeneger
 
 def run():
@@ -13,4 +13,9 @@ def run():
 
             ScreenMeneger.scroll_on_screen(value_to_scroll=-400)
             time.sleep(random.randint(1, 2))
+
+        if keyboard.is_pressed("esc"):
+            print("leaving app...")
+            time.sleep(1.5)
+            break
 run()
